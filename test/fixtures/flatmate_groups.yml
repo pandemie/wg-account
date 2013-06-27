@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: "Dima"
+  shortname: "D"
+
+two:
+  name: "Miri"
+  shortname: "M"

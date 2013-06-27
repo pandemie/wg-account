@@ -1,0 +1,55 @@
+<%= render_navigation :renderer => :links %>
+
+<p id="notice"><%= notice %></p>
+
+<table id="balance">
+  <% transaction_balance.each do |balance| %>
+    <tr>
+      <td><%= balance[:name] %></td>
+      <td class="<%= (balance[:amount] < 0) ? "negative" : "positive" %>"><%= number_to_euro balance[:amount] %></td>
+    </tr>
+  <% end %>
+</table>
+
+
+<%= render 'form' %>
+
+<table id="transactions_list">
+  <tr>
+    <th>Debtors</th>
+    <th>Creditors</th>
+    <th>Amount</th>
+    <th>Description</th>
+    <th>Date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @transactions.reverse_each do |transaction| %>
+    <tr class="<%= cycle('oddrow', 'evenrow') %>" >
+      <td>
+        <div class="flatmate_field"><%= flatmate_group_list transaction.debtors %></div>
+      </td>
+      <td>
+        <div class="flatmate_field"><%= flatmate_group_list transaction.creditors %></div>
+      </td>
+      <td>
+        <div><%= number_to_currency(transaction.amount, :unit => "€", :separator => ",", :delimiter => ".", :format => "%n%u")  %></div>
+      </td>
+      <td>
+        <div class="description_field"><%= transaction.description %></div>
+      </td>
+      <td>
+        <div><%= transaction.created_at.strftime("%d.%m.%Y %H:%M") %></div>
+      </td>
+      <td>
+        <div><%= link_to 'Edit', edit_transaction_path(transaction) %></div>
+      </td>
+      <td>
+        <div><%= link_to 'Destroy', transaction, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+      </td>
+    </tr>
+  <% end %>
+</table>
+<br />

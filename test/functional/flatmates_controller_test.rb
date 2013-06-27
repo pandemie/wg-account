@@ -1,0 +1,59 @@
+require 'test_helper'
+
+class FlatmatesControllerTest < ActionController::TestCase
+  setup do
+    @flatmate = flatmates(:one)
+    @name_update = {
+      :name => "Ocean"
+    }
+  end
+
+  test "should get index" do
+    get :index
+    assert_response :success
+    assert_not_nil assigns(:flatmates)
+  end
+
+  test "should get new" do
+    get :new
+    assert_response :success
+  end
+
+  test "should create flatmate" do
+    assert_equal([], FlatmateGroup.where(name: @name_update[:name]), "A Flatmate can not have the name of an existing group")
+    assert_difference('Flatmate.count') do
+      post :create, :flatmate => @name_update
+    end
+    assert_not_equal([], FlatmateGroup.where(name: @flatmate.name), "After a flatmate is created, there must be a group with the same name")
+    assert_redirected_to flatmate_path(assigns(:flatmate))
+  end
+
+  test "should show flatmate" do
+    get :show, id: @flatmate
+    assert_response :success
+  end
+
+  test "should get edit" do
+    get :edit, id: @flatmate
+    assert_response :success
+  end
+
+  test "should update flatmate" do
+    assert_not_equal [], FlatmateGroup.where(name: @flatmate.name), "Every flatmate should have his own group"
+    @group_id = FlatmateGroup.where(name: @flatmate.name).first.id
+    put :update, id: @flatmate.to_param, :flatmate => @name_update
+    assert_equal @name_update[:name], Flatmate.find(@flatmate.id).name, "Name should have changed on update"
+    assert_equal FlatmateGroup.find(@group_id).name, Flatmate.find(@flatmate.id).name, "Name of personal group should have changed"
+    assert_redirected_to flatmate_path(assigns(:flatmate))
+  end
+
+  test "should destroy flatmate" do
+    assert_not_equal([], FlatmateGroup.where(name: @flatmate.name), "Every flatmate must have his own group")
+    assert_difference('Flatmate.count', -1) do
+      delete :destroy, id: @flatmate
+    end
+    assert_equal([], FlatmateGroup.where(name: @flatmate.name), "When a flatmate gets deleted, his group must be deleted")
+
+    assert_redirected_to flatmates_path
+  end
+end

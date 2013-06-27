@@ -1,0 +1,7 @@
+<h1>Editing flatmate</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @flatmate %> |
+<%= link_to 'Back', flatmates_path %> |
+<%= link_to 'Destroy', flatmate, method: :delete, data: { confirm: 'Are you sure?' } %>

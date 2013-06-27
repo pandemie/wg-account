@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Amount:</b>
+  </br><%= @transaction.amount %>
+</p>
+
+<p>
+  <b>Description:</b>
+  </br><%= @transaction.description %>
+</p>
+
+<p>
+  <b>Debtors:</b>
+  <% @transaction.debtors.each do |debtor| %>
+    </br><%= debtor.name %>
+  <% end %>
+</p>
+
+<p>
+  <b>Creditors:</b>
+  <% @transaction.creditors.each do |creditor| %>
+    </br><%= creditor.name %>
+  <% end %>
+</p>
+
+<p>
+  <b>Created At:</b>
+    </br><%= @transaction.created_at.strftime("%d.%m.%Y %H:%M") %>
+</p>
+<p>
+  <b>Updated At:</b>
+    </br><%= @transaction.updated_at.strftime("%d.%m.%Y %H:%M") %>
+</p>
+<%= link_to 'Edit', edit_transaction_path(@transaction) %> |
+<%= link_to 'Back', transactions_path %>

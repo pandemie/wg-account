@@ -1,0 +1,36 @@
+<%= form_for(@flatmate_group) do |f| %>
+  <% if @flatmate_group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@flatmate_group.errors.count, "error") %> prohibited this flatmate_group from being saved:</h2>
+
+      <ul>
+      <% @flatmate_group.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    Is Active: <%= f.check_box(:is_active) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :shortname %><br />
+    <%= f.text_field :shortname %>
+  </div>
+
+  <% Flatmate.all.each do |fm| %>
+    <%= label_tag fm.name %>:
+    <%= check_box_tag "updated_group_members[]", fm.name, @flatmate_group.flatmates.index(fm) %><br />
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

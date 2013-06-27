@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<%= render 'error' %>
+
+<h1>Name: <%= @flatmate_group.name %></h1>
+<p>short name: <%= @flatmate_group.shortname %></p>
+<h2>Members:</h2>
+<% @flatmate_group.flatmates.each do |fm| %>
+  <p><%= fm.name %></p>
+<% end %>
+
+
+<%= link_to 'Edit', edit_flatmate_group_path(@flatmate_group) %> |
+<%= link_to 'Back', flatmate_groups_path %>

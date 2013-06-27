@@ -1,0 +1,58 @@
+// Place all the styles related to the Transactions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.transaction_form {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+#balance {
+    color: #000;
+    border: 2px solid red;
+    padding: 1em;
+    margin-bottom: 2em;
+    background-color: #f0f0f0;
+    font: bold large sans-serif;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    .negative {
+        color: red;
+    }
+    .positive {
+        color: green;
+    }
+
+}
+
+#transactions_list {
+    table-layout: fixed;
+    padding-left: 20px;
+    overflow:scroll;
+    th {
+        text-align: left;
+    }
+    td div {
+        padding: 7px;
+    }
+    tr.evenrow {background-color: #119911; }
+    tr.oddrow {background-color: #55cc55; }
+    .description_field {
+        width: 360px;
+        height: 15px;
+        overflow:hidden;
+    }
+    .flatmate_field {
+        width: 200px;
+        max-width: 200px;
+    }
+
+}
+
+.new_transaction_field {
+    vertical-align: bottom;
+    div {
+        margin-bottom: 5px;
+    }
+}

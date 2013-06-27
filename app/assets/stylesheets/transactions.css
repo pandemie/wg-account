@@ -1,0 +1,43 @@
+.transaction_form {
+  padding-left: 20px;
+  padding-top: 20px; }
+
+#balance {
+  color: #000;
+  border: 2px solid red;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: #f0f0f0;
+  font: bold large sans-serif;
+  position: fixed;
+  right: 10px;
+  top: 10px; }
+  #balance .negative {
+    color: red; }
+  #balance .positive {
+    color: green; }
+
+#transactions_list {
+  table-layout: fixed;
+  padding-left: 20px;
+  overflow: scroll; }
+  #transactions_list th {
+    text-align: left; }
+  #transactions_list td div {
+    padding: 7px; }
+  #transactions_list tr.evenrow {
+    background-color: #119911; }
+  #transactions_list tr.oddrow {
+    background-color: #55cc55; }
+  #transactions_list .description_field {
+    width: 360px;
+    height: 15px;
+    overflow: hidden; }
+  #transactions_list .flatmate_field {
+    width: 200px;
+    max-width: 200px; }
+
+.new_transaction_field {
+  vertical-align: bottom; }
+  .new_transaction_field div {
+    margin-bottom: 5px; }

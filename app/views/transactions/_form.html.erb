@@ -1,0 +1,63 @@
+<%= form_for(@transaction) do |f| %>
+  <% if @transaction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
+
+      <ul>
+        <% @transaction.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <table class="transaction_form">
+    <tr>
+      <td>
+        <table>
+          <tr>
+            <th>Debtors</th>
+            <th></th>
+            <th>Creditors</th>
+            <th></th>
+          </tr>
+	  <% FlatmateGroup.where(:is_active => 1).each do |fm| %>
+            <tr>
+              <td>
+	        <%= label_tag :name, fm.name %>
+              </td>
+              <td>
+                <%= check_box_tag "new_debtors[]", fm.name, @transaction.debtors.index(fm) %>
+              </td>
+              <td>
+                <%= label_tag :name, fm.name %>:
+              </td>
+              <td>
+                <%= check_box_tag "new_creditors[]", fm.name, @transaction.creditors.index(fm) %>
+              </td>
+            </tr>
+          <% end %>
+        </table>
+      </td>
+      <td  class="new_transaction_field">
+        <div class="field">
+          <%= f.text_field :amount, :value => number_with_precision(f.object.amount), :placeholder => 'Amount' %>
+        </div>
+      </td>
+      <td class="new_transaction_field">
+        <div class="field">
+          <%= f.text_field :description, :placeholder => 'Description' %>
+        </div>
+      </td>
+      <td class="new_transaction_field">
+        <div class="actions">
+          <%= f.submit %>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+
+
+
+<% end %>

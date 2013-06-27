@@ -1,0 +1,97 @@
+M->D 1,00€ Test - create - 08.03.2013 21:09
+M->D 2,00€ Test - update - 08.03.2013 21:09
+M->D 2,00€ Test - delete - 08.03.2013 21:09
+M+WG->A+T 3,00€ Käsespätzle - create - 08.03.2013 22:27
+M+WG->A+T 3,00€ Eier für Käsespätzle - update - 08.03.2013 22:27
+M+WG->A+T 8,00€ Käse für Käsespätzle - create - 08.03.2013 22:28
+M+WG->M 12,05€ Käse für Käsespätzle - create - 08.03.2013 22:28
+WG->A+T 3,20€ Zwiebeln - create - 08.03.2013 22:29
+WG->A+T 1,44€ Holzpflökchen - create - 08.03.2013 22:31
+WG->A+T 3,19€ gf. Gemüsebrühe - create - 08.03.2013 22:31
+L->T 1,69€ Cornflakes - create - 08.03.2013 22:33
+D+M->A+T 26,00€ Ziegenessen, 2 mal, für 51,10 Essen für 6 plus 3x7,50€ Wein für  5 - create - 08.03.2013 22:33
+WG->A+T 2,40€ Zwiebeln - create - 08.03.2013 22:34
+L->D 2,28€ Brie und Paprika - create - 08.03.2013 22:34
+M+WG->D 16,68€ Pizza Zutaten - create - 08.03.2013 22:37
+WG->D 1,98€ Knoblauch, Seife - create - 08.03.2013 22:38
+WG->A+T 9,20€ Kartoffeln und Zwiebeln - create - 08.03.2013 22:38
+WG->A 4,56€ Kartoffeln - create - 08.03.2013 22:39
+WG->A 10,40€ Piezo-Anzünder - create - 08.03.2013 22:39
+A+T+D->M 1,89€ Kartoffeln - create - 08.03.2013 22:40
+A->M 18,95€ Buch "21st Century C" - create - 08.03.2013 22:40
+A+T->WG 9,00€ WG Rabatt - create - 08.03.2013 22:41
+WG->A+T 59,84€ Spülmittel, Klopa, Küro, Tabs, Spezialsalz, Streichhölzer, Reinigungskram, Glitzi - create - 08.03.2013 22:41
+A+T+D->A+T 19,95€ Kaffee (1/3 wie immer) - create - 08.03.2013 22:42
+WG->A+T 2,63€ Hausverwaltung Brief - create - 11.03.2013 13:08
+WG->A+T 0,69€ Müllbeutel - create - 11.03.2013 13:10
+WG->A+T 12,50€ Kartoffeln - create - 16.03.2013 13:30
+WG->A+T 0,59€ Hausverwaltung Brief - create - 18.03.2013 19:49
+T->D 2,60€ Schlagsahne - create - 26.03.2013 18:34
+WG->A+T 3,00€ Salz und Zwibeln - create - 01.04.2013 17:16
+WG->A+T 3,00€ Salz und Zwiebeln - update - 01.04.2013 17:17
+L+M->WG 5,72€ paprika zuchini möhren emmentaler gouda sahne - create - 03.04.2013 22:33
+L+M->M 5,72€ paprika zuchini möhren emmentaler gouda sahne - update - 03.04.2013 22:34
+WG->M 1,44€ Milch, Sahne - create - 03.04.2013 22:35
+A+T->M 1,44€ Milch, Sahne - update - 03.04.2013 22:35
+A+T+D->M 1,55€ Gouda - create - 03.04.2013 22:45
+WG->A+T 50,00€ Bares - create - 06.04.2013 11:31
+A+T->D 50,00€ Bares - update - 06.04.2013 11:31
+WG->A+T 2,52€ Zwiebeln - create - 06.04.2013 13:38
+WG->T 6,95€ Telekom, Versandkosten Router - create - 08.04.2013 13:02
+WG->A+T 8,00€ 10kg Kartoffeln - create - 13.04.2013 12:18
+WG->T 0,96€ Telefonrechnung - create - 15.04.2013 16:29
+WG->D 1,55€ Schwammtücher zum Putzen - create - 22.04.2013 18:33
+WG->A+T 2,90€ Zucker - create - 26.04.2013 10:25
+D->T 20,00€ Bares für den Metzger - create - 27.04.2013 11:52
+A+T->D 12,98€ Metzger - create - 27.04.2013 13:43
+D->L 50,00€ Bargeld - create - 01.05.2013 11:27
+WG->A+T 8,00€ Kartoffeln - create - 05.05.2013 19:27
+A+T+D->A+T 8,00€ Kartoffeln - update - 08.05.2013 21:03
+WG->A+T 3,98€ Sonnenblumenöl - create - 08.05.2013 21:04
+D+M->A+T 3,00€ Bier und Cola Tag des Sieges - create - 09.05.2013 20:07
+WG->A+T 0,69€ Müllbeutel - create - 10.05.2013 18:27
+WG->A+T 24,99€ Olivenöl 3l - create - 12.05.2013 19:24
+D+M->A+T 5,00€ Galette-Essen - create - 13.05.2013 00:19
+WG->M 3,90€ 2x Toipapier - create - 13.05.2013 20:40
+A+T+D->A+T 8,00€ Kartoffeln - create - 25.05.2013 12:47
+D->A+T 2,60€ Äpfel und Orangen - create - 25.05.2013 12:48
+WG->A 1,99€ Küchenrolle - create - 30.05.2013 14:28
+WG->A 3,69€ Balsamico-Essig - create - 03.06.2013 12:31
+D->WG 5,00€ test - create - 03.06.2013 20:23
+D->WG 5,00€ test - delete - 03.06.2013 20:23
+M->A+T+L+D 100,00€ Nebenkostenanteil - create - 03.06.2013 20:26
+A+T+D+M->A+T 2,00€ Zwiebeln - create - 08.06.2013 14:30
+WG->M 13,68€ Toipapier und Spezialsalz - create - 11.06.2013 23:49
+WG->D+M 0,50€ Knoblauchgranulat - create - 12.06.2013 22:33
+L->D 2,00€ Paprika - create - 19.06.2013 22:25
+WG->D 2,50€ Backpapier+Müllbeutel - create - 19.06.2013 22:25
+A+T+D+M->A+T 10,00€ 12,5kg Kartoffeln - create - 22.06.2013 14:10
+T->D 0,99€ joghurt - create - 22.06.2013 15:48
+D->D 1,00€ test - create - 22.06.2013 17:26
+D->D 1,00€ test - delete - 22.06.2013 17:26
+D->D 1,00€ test - create - 22.06.2013 17:27
+D->D 1,00€ test - delete - 22.06.2013 17:27
+D->D 2,00€ test2 - create - 22.06.2013 17:27
+D->D 2,00€ test2 - delete - 22.06.2013 17:27
+D->D 117,20€ test3 - create - 22.06.2013 17:28
+D->D 117,20€ test3 - delete - 22.06.2013 17:28
+D->D 25,80€ test - create - 22.06.2013 17:29
+D->D 25,80€ test - delete - 22.06.2013 17:29
+D->D 13,00€ test5 - create - 22.06.2013 17:30
+D->D 13,00€ test5 - delete - 22.06.2013 17:30
+D->D 41,00€ test - create - 22.06.2013 17:31
+D->D 41,00€ test - delete - 22.06.2013 17:31
+D->D 82,00€ Test - create - 22.06.2013 17:40
+D->D 82,00€ Test - delete - 22.06.2013 17:40
+D->D 4,00€ test - create - 23.06.2013 12:16
+D->D 4,00€ test - delete - 23.06.2013 12:17
+D->D 5,00€ foo - create - 23.06.2013 12:17
+D->D 4,00€ test - create - 23.06.2013 12:18
+D->D 5,00€ foo - delete - 23.06.2013 12:18
+D->D 4,00€ test - delete - 23.06.2013 12:18
+D->D 5,00€ test - create - 23.06.2013 12:19
+D->D 5,00€ test - delete - 23.06.2013 12:19
+D->D 11,00€ test - create - 23.06.2013 12:21
+D->D 11,00€ test - delete - 23.06.2013 12:21
+D->T 3,29€ Erdbeeren - create - 23.06.2013 12:23
+T->D+M 1,40€ Bier - create - 27.06.2013 00:40
