@@ -1,9 +1,19 @@
 Shared flat accounting tool in Ruby on Rails
 ============================================
 
-Living in a shared flat (WG for Wohngemeinschaft in german), I made a tool to
-track who owes how much to whom. You can run this tool on your home server and
-anyone in your home network can use it.
+Living in a shared flat (WG for Wohngemeinschaft in german), I made a tool for
+tracking debts and credits. If you and your flatmates often buy stuff for
+eachother, or if you agreed upon sharing the bill for the noodles, this tool can
+be useful. Whenever someone spends some money, you enter the amount of money, a
+description and the creditors and debtors of that transaction. So for example if
+I buy bananas worth 5€ for me and Kurt, then I will enter me on the creditor
+side, and me+Kurt on the debtor side. After that I get a 2.5€ plus on my
+balance, and Kurt gets 2.5€ minus. The advantage of this system is, that Kurt
+does not nee to pay me back directly, he just needs to buy something for anyone
+else in the flat and thus transfering his debt.
+
+You can run this tool on your home server and anyone in your home network can
+use it.
 
 This is my first Ruby on Rails project so please be forgiving whlie testing and
 let me know what to improve.
