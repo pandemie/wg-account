@@ -21,12 +21,28 @@ Running
 =======
 
 I tested it only on debian, so no guarantees for other OS. Obviously you also
-need *ruby* and *ruby on rails*.
+need *ruby* and *ruby on rails*. Until I find out how to get rid of most of the
+following steps, please do the following:
 
-1. clone the repo
-2. navigate into the wg-account directory
+1. git clone https://github.com/pandemie/wg-account.git
+2. cd wg-account
+3. gem install simple-navigation
+4. gem install prevent\_destroy\_if\_any
+5. bundle install
 3. $> rake db:create
 3. $> rake db:migrate
 4. $> rails s
 
-The last point start the debug server, which is frankly enough for most flats. ;)
+The last point start the debug server, which is frankly enough for most
+flats. ;) Then type ***0.0.0.0:3000*** into the adressbar of your browser and
+hit enter.
+
+Using
+=====
+
+First of all you want to create some flatmates by clicking on "Flatmates" in the
+navigation bar. After that you can create a flatmate group, for example a group
+for all flatmates.
+
+On the transactions page, you can add new transactions in the obvious way. The
+account field also accepts simple arithmetic expressions (eg. 2.5 + 7.4  + 4.5 * 8)
