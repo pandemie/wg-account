@@ -68,7 +68,7 @@ class FlatmateGroupsController < ApplicationController
     @flatmate_group = FlatmateGroup.find(params[:id])
 
     @flatmate_group.flatmates.clear
-
+    params[:flatemate_group][:is_active] = params[:flatemate_group][:is_active] == "1"
     new_members = params[:updated_group_members]
     for member in new_members
       @flatmate_group.flatmates << Flatmate.where(name: member)

@@ -13,6 +13,6 @@ class FlatmateGroup < ActiveRecord::Base
   validates :name, :shortname, :presence => true
   validates :name, :shortname, :uniqueness => true
 
-  attr_accessible :flatmate_group_membership, :flatmate_group, :name, :debt, :credit, :shortname, :is_active
-  attr_accessible :receiving_transaction, :giving_transaction
+  attr_accessible :flatmate_group_membership, :flatmate_group, :name, :debt, :credit, :shortname
+  attr_accessible :flatmates, :receiving_transaction, :giving_transaction, :is_active
 end

@@ -21,7 +21,7 @@ class Flatmate < ActiveRecord::Base
     end
 
     def build_default_flatmate_group
-      g = FlatmateGroup.create!(:name => self.name, :shortname => self.name, :is_active => true)
+      g = FlatmateGroup.create!(:name => self.name, :shortname => self.name, :is_active => 1)
       g.is_active = true
       g.flatmates << self
       g.save

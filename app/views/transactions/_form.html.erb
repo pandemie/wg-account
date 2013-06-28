@@ -21,10 +21,10 @@
             <th>Creditors</th>
             <th></th>
           </tr>
-	  <% FlatmateGroup.where(:is_active => 1).each do |fm| %>
+          <% FlatmateGroup.where(:is_active => true).each do |fm| %>
             <tr>
               <td>
-	        <%= label_tag :name, fm.name %>
+                <%= label_tag :name, fm.name %>
               </td>
               <td>
                 <%= check_box_tag "new_debtors[]", fm.name, @transaction.debtors.index(fm) %>

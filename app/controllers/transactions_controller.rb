@@ -54,7 +54,7 @@ class TransactionsController < ApplicationController
 
     respond_to do |format|
       if @transaction.save
-        write_transaction_to_log("create",@transaction)
+        #write_transaction_to_log("create",@transaction)
         format.html { redirect_to transactions_url, notice: 'Transaction was successfully created.' }
         format.json { render json: transactions_url, status: :created, location: @transaction }
       else
