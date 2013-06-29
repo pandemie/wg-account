@@ -41,6 +41,7 @@ class FlatmatesController < ApplicationController
   # POST /flatmates.json
   def create
     @flatmate = Flatmate.new(params[:flatmate])
+    @flatmate.personal_group = FlatmateGroup.new(:name => @flatmate.name, :shortname => @flatmate.name, :is_active => true, :is_personal => true)
 
     respond_to do |format|
       if @flatmate.save

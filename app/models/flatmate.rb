@@ -5,30 +5,24 @@ class Flatmate < ActiveRecord::Base
   has_many :receiving_transactions, :through => :flatmate_groups
   has_many :giving_transactions, :through => :flatmate_groups
 
+  has_one  :personal_group, :class_name => "FlatmateGroup"
+
   prevent_destroy_if_any :receiving_transactions, :giving_transactions
 
-  #after_create :add_one_flatmate_group
-  #after_destroy :remove_one_flatmate_group
-  after_save :build_default_flatmate_group
+  before_save :build_default_flatmate_group
 
-  attr_accessible :flatmate_group_membership, :flatmate_group, :name
+  attr_accessible :flatmate_group_membership, :flatmate_group, :name, :personal_group
 
   validates :name, :uniqueness => true
 
   private
-    def add_one_flatmate_group
-      FlatmateGroup.create!(:name => self.name, :shortname => self.name[0,1], :is_active => true)
-    end
 
     def build_default_flatmate_group
-      g = FlatmateGroup.create!(:name => self.name, :shortname => self.name, :is_active => true)
-      g.is_active = true
-      g.flatmates << self
-      g.save
+#      g = FlatmateGroup.create!(:name => self.name, :shortname => self.name, :is_active => true, :is_personal => true)
+#      g.flatmates << self
+#      self.personal_group = g
+#      g.save
       true
     end
 
-    def remove_one_flatmate_group
-      FlatmateGroup.where(:name => self.name).destroy_all
-    end
 end

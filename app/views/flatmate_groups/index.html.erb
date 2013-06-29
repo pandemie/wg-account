@@ -1,16 +1,17 @@
-<h1>Listing Flatmate Groups</h1>
+<h1>Flatmate Groups</h1>
 
+<div class="index_content">
 <table>
   <tr>
-    <th>Name</th>
+    <th><div class="name_line">Name</div></th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
-<% @flatmate_groups.each do |flatmate_group| %>
+  <% @flatmate_groups.each do |flatmate_group| %>
   <tr>
-    <td><%= flatmate_group.name %></td>
+    <td><div class="name_line"><%= flatmate_group.name %></div></td>
     <td><%= link_to 'Show', flatmate_group %></td>
     <td><%= link_to 'Edit', edit_flatmate_group_path(flatmate_group) %></td>
   </tr>
@@ -20,3 +21,4 @@
 <br />
 
 <%= link_to 'New Flatmate group', new_flatmate_group_path %>
+<div>

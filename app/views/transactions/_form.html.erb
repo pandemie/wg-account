@@ -24,13 +24,17 @@
           <% FlatmateGroup.where(:is_active => true).each do |fm| %>
             <tr>
               <td>
+                <div class="check_name">
                 <%= label_tag :name, fm.name %>
+                </div>
               </td>
               <td>
                 <%= check_box_tag "new_debtors[]", fm.name, @transaction.debtors.index(fm) %>
               </td>
               <td>
-                <%= label_tag :name, fm.name %>:
+                <div class="check_name">
+                <%= label_tag :name, fm.name %>
+                </div>
               </td>
               <td>
                 <%= check_box_tag "new_creditors[]", fm.name, @transaction.creditors.index(fm) %>

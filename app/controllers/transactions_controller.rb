@@ -89,7 +89,7 @@ class TransactionsController < ApplicationController
 
     respond_to do |format|
       if @transaction.update_attributes(@attributes)
-        write_transaction_to_log("update",@transaction)
+        #write_transaction_to_log("update",@transaction)
         format.html { redirect_to transactions_url, notice: 'Transaction was successfully updated.' }
         format.json { head :no_content }
       else
@@ -106,7 +106,7 @@ class TransactionsController < ApplicationController
     @transaction.destroy
 
     respond_to do |format|
-      write_transaction_to_log("delete",@transaction)
+      #write_transaction_to_log("delete",@transaction)
       format.html { redirect_to transactions_url }
       format.json { head :no_content }
     end

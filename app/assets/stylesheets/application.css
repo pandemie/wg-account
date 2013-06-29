@@ -12,7 +12,27 @@
  *= require_tree .
  */
 
+
 #navigation_bar a {
-	font-size: 14pt;
-	margin: 5pt;
+        font-size: 14pt;
+        margin: 5pt;
+}
+
+.back_and_forth{
+    padding-top: 20pt;
+    font-size: 14pt;
+}
+
+.name_line {
+    font-size: 12pt;
+    padding: 3pt;
+}
+
+.list_line {
+    font-size: 12pt;
+    padding: 3pt;
+}
+
+.index_content {
+    padding-left: 13pt;
 }

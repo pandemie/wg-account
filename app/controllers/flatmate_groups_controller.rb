@@ -40,19 +40,18 @@ class FlatmateGroupsController < ApplicationController
   # POST /flatmate_groups
   # POST /flatmate_groups.json
   def create
+    params[:flatmate_group][:is_active] = params[:flatmate_group][:is_active] == "1"
+    @flatmate_group = FlatmateGroup.new(params[:flatmate_group])
+    @new_members_names = params[:updated_group_members]
+    @new_members_names = [] if @new_members_names.nil?
     @flatmates = []
-    for member in params[:updated_group_members]
-      @flatmates << Flatmate.where(name: member).first
-    end
 
-    @flatmate_group = @flatmates[0].flatmate_groups.build(params[:flatmate_group])
-
-    for flatmate in @flatmates
-      flatmate.flatmate_groups << @flatmate_group
+    for name in @new_members_names
+      Flatmate.where(name: name).first.flatmate_groups << @flatmate_group
     end
 
     respond_to do |format|
-      if @flatmates[0].save
+      if @flatmate_group.save
         format.html { redirect_to @flatmate_group, notice: 'Flatmate group was successfully created.' }
         format.json { render json: @flatmate_group, status: :created, location: @flatmate_group }
       else

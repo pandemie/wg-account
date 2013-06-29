@@ -6,6 +6,8 @@ class FlatmateGroup < ActiveRecord::Base
   has_many :credits
   has_many :giving_transactions, :through => :credits, :source => :transaction
 
+  belongs_to :personal_flatmate, :class_name => "Flatmate"
+
   prevent_destroy_if_any :receiving_transactions, :giving_transactions
 
   accepts_nested_attributes_for :flatmates
@@ -13,6 +15,6 @@ class FlatmateGroup < ActiveRecord::Base
   validates :name, :shortname, :presence => true
   validates :name, :shortname, :uniqueness => true
 
-  attr_accessible :flatmate_group_membership, :flatmate_group, :name, :debt, :credit, :shortname
-  attr_accessible :flatmates, :receiving_transaction, :giving_transaction, :is_active
+  attr_accessible :flatmate_group_membership, :flatmate_group, :name, :debt, :credit, :shortname, :personal_flatmate
+  attr_accessible :flatmates, :receiving_transaction, :giving_transaction, :is_active, :is_personal
 end
