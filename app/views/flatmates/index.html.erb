@@ -1,25 +1,30 @@
 <h1>Flatmates</h1>
 
 <div class="index_content">
-<table>
-  <tr>
-    <th> <div class="name_line">Name</div></th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-  <% @flatmates.each do |flatmate| %>
+  <table>
     <tr>
+      <th>
+        <% if @flatmates.length > 0 %>
+          <div class="name_line">Name</div>
+        <% end %>
+      </th>
+
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+
+    <% @flatmates.each do |flatmate| %>
+      <tr>
         <td> <div class="list_line"><%= flatmate.name %> </div></td>
         <td><%= link_to 'Show', flatmate %></td>
         <td><%= link_to 'Edit', edit_flatmate_path(flatmate) %></td>
-    </tr>
-  <% end %>
+      </tr>
+    <% end %>
 
-</table>
+  </table>
 
-<br />
+  <br />
 
-<%= link_to 'New Flatmate', new_flatmate_path %>
+  <%= link_to 'New Flatmate', new_flatmate_path %>
 </div>

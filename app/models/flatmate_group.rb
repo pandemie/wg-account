@@ -6,7 +6,7 @@ class FlatmateGroup < ActiveRecord::Base
   has_many :credits
   has_many :giving_transactions, :through => :credits, :source => :transaction
 
-  belongs_to :personal_flatmate, :class_name => "Flatmate"
+  #belongs_to :personal_flatmate, :class_name => "Flatmate"
 
   prevent_destroy_if_any :receiving_transactions, :giving_transactions
 

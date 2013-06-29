@@ -44,15 +44,16 @@ following steps, please do the following:
 4. $> rails s
 
 The last point start the debug server, which is frankly enough for most
-flats. ;) Then type ***0.0.0.0:3000*** into the adressbar of your browser and
+flats. ;) Then type ***localhost:3000*** into the adressbar of your browser and
 hit enter.
 
 Using
 =====
 
 First of all you want to create some flatmates by clicking on "Flatmates" in the
-navigation bar. After that you can create a flatmate group, for example a group
-for all flatmates.
+navigation bar. After that you need to create some flatmate groups. Since all
+transactions are between groups of flatmates, and not between flatmates
+directly, you probably want to at least create a group for every flatmate.
 
 On the transactions page, you can add new transactions in the obvious way. The
-account field also accepts simple arithmetic expressions (eg. 2.5 + 7.4  + 4.5 * 8)
+account field also accepts simple arithmetic expressions (eg. 2.5 + 7.4 + 4.5 * 8)

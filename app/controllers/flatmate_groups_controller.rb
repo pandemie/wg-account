@@ -42,6 +42,8 @@ class FlatmateGroupsController < ApplicationController
   def create
     params[:flatmate_group][:is_active] = params[:flatmate_group][:is_active] == "1"
     @flatmate_group = FlatmateGroup.new(params[:flatmate_group])
+    #@flatmate_group.is_personal = false
+    @flatmate_group.shortname = @flatmate_group.name
     @new_members_names = params[:updated_group_members]
     @new_members_names = [] if @new_members_names.nil?
     @flatmates = []

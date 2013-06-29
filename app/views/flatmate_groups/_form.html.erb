@@ -20,11 +20,6 @@
     <%= f.text_field :name %>
   </div>
 
-  <div class="field">
-    <%= f.label :shortname %><br />
-    <%= f.text_field :shortname %>
-  </div>
-
   <% Flatmate.all.each do |fm| %>
     <%= label_tag fm.name %>:
     <%= check_box_tag "updated_group_members[]", fm.name, @flatmate_group.flatmates.index(fm) %><br />

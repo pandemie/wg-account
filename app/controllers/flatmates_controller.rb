@@ -41,7 +41,7 @@ class FlatmatesController < ApplicationController
   # POST /flatmates.json
   def create
     @flatmate = Flatmate.new(params[:flatmate])
-    @flatmate.personal_group = FlatmateGroup.new(:name => @flatmate.name, :shortname => @flatmate.name, :is_active => true, :is_personal => true)
+#    @flatmate.flatmate_groups << FlatmateGroup.new(:name => @flatmate.name, :shortname => @flatmate.name, :is_active => true, :is_personal => true)
 
     respond_to do |format|
       if @flatmate.save
@@ -78,9 +78,11 @@ class FlatmatesController < ApplicationController
   # DELETE /flatmates/1.json
   def destroy
     @flatmate = Flatmate.find(params[:id])
-
+    #pg = @flatmate.personal_group
     respond_to do |format|
       if @flatmate.destroy
+        #pg.is_active = false unless pg.nil?
+        #pg.save
         format.html { redirect_to flatmates_url, notice: 'Flatmate was successfully deleted.' }
         format.json { head :no_content }
       else
