@@ -44,7 +44,6 @@ class TransactionsController < ApplicationController
   # POST /transactions
   # POST /transactions.json
   def create
-    original_params = params
     params[:transaction][:amount] = Calc.evaluate(params[:transaction][:amount].gsub(',','.'))
     @transaction = Transaction.new(params[:transaction])
     @transactions = Transaction.all
@@ -67,6 +66,7 @@ class TransactionsController < ApplicationController
   # PUT /transactions/1
   # PUT /transactions/1.json
   def update
+    params[:transaction][:amount] = Calc.evaluate(params[:transaction][:amount].gsub(',','.'))
     @transaction = Transaction.find(params[:id])
     @attributes = {}
 
